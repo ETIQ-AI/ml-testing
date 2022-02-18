@@ -40,17 +40,11 @@ pip install etiq-core
 
 ### DatascienceFestivalDemoLeakage_Sept_2021_2.
 
-The etiqai library enables users to identify and mitigate bias in predictive models. The library is similar to pytorch or sklearn libraries, with a battery of metrics and debiasing algorithms available to find the best debiasing method for the problem at hand. We are now adding functionality to identify additional issues in predictive models, e.g. leakage, which we found are very time-consuming and have many other bias and non-bias related implications down-the-line.
-
-The DataPipeline object holds what we'd like to focus on during the debiasing process: the dataset used for training the model, the model we'd like to test and the fairness metrics used to evaluate results. DebiasPipeline objects take the initial DataPipeline object and apply to it different Identify methods, which aim to generate flags for rows at risk of being biased against, or Repair methods. Repair methods generate new "debiased" datasets. Models trained on debiased datasets perform better on fairness metrics. We have a (growing) collection of repair methods that allow our users to pick the debiased dataset version that best fits their criteria for a good solution.
+More details to follow ...
 
 ### DemoAdultLibrary03
 
-The Etiq AI library enables users to identify and mitigate bias in predictive models. The library is similar to pytorch or sklearn libraries, with a battery of metrics and debiasing algorithms available to find the best debiasing method for the problem at hand.
-
-The DataPipeline object holds what we'd like to focus on during the debiasing process: the dataset used for training the model, the model we'd like to test and the fairness metrics used to evaluate results. DebiasPipeline objects take the initial DataPipeline object and apply to it different Identify methods, which aim to generate flags for rows at risk of being biased against, or Repair methods. Repair methods generate new "debiased" datasets. Models trained on debiased datasets perform better on fairness metrics. We have a (growing) collection of repair methods that allow our users to pick the debiased dataset version that best fits their criteria for a good solution.
-
-As a social enterprise, our mission is to address some of the most fundamental AI ethics issues to create a fairer world. We really appreciate your feedback on using this library, whether it's good or bad! With your support we firmly believe we can build a better world together. To access our full solution including hands on support, to submit any comments, feature requests or issues please login to our slack channel https://etiqcore.slack.com or email us at info@etiq.ai
+More details to follow ...
 
 ## Bugs and feature requests
 
