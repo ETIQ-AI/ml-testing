@@ -36,6 +36,7 @@ pip install etiq-core
 ## Example Notebooks
 
 - [DemoAdultLibrary03](#DemoAdultLibrary03)
+- [DemoAdultDataset03 - Library Only](#DemoAdultDataset03 - Library Only)
 
 ### DemoAdultLibrary03
 
