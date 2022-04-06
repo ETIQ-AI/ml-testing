@@ -36,7 +36,7 @@ pip install etiq-core
 ## Example Notebooks
 
 - [DemoAdultLibrary03](#DemoAdultLibrary03)
-- [DemoAdultDataset03 - Library Only](#DemoAdultDataset03 - Library Only)
+- [DemoAdultDataset03 - Library Only](https://github.com/ETIQ-AI/demo/blob/main/DemoAdultDataset03%20-%20Library%20Only.ipynb)
 
 ### DemoAdultLibrary03
 
