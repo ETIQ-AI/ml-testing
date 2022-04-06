@@ -35,16 +35,11 @@ pip install etiq-core
 
 ## Example Notebooks
 
-- [DatascienceFestivalDemoLeakage_Sept_2021_2](#DatascienceFestivalDemoLeakage_Sept_2021_2)
 - [DemoAdultLibrary03](#DemoAdultLibrary03)
-
-### DatascienceFestivalDemoLeakage_Sept_2021_2.
-
-More details to follow ...
 
 ### DemoAdultLibrary03
 
-More details to follow ...
+This is the main example notebook for our library, however if you have questions on any of the functionality check out the documentation or contact us directly!
 
 ## Bugs and feature requests
 
