@@ -21,26 +21,22 @@
   <a href="https://etiq.ai/contact-us">Contact</a>
 </p>
 
-## Etiq AI Library
+## Etiq AI 
 
-In order to start working with the Etiq AI platform you first need to integrate our Python library which is used to interrogate your predictive models. This repository provides a number of notebooks and examples that show how easy it is to use and work with the Etiq AI library.
+In order to start working with the Etiq AI platform you will need to sign-up to our dashboard and then install the python package. This repository provides a number of notebooks and examples that show how easy it is to use and work with the Etiq.
 
-### Installing the Etiq AI library
+### Docs
 
-Installing the Etiq AI library via the Pypi package manager is as simple as
+For a quickstart and install just go to our docs: https://docs.etiq.ai/quickstart
 
-```shell
-pip install etiq-core
-```
 
-## Example Notebooks
+## Example Notebooks & Configs
 
-- [DemoAdultLibrary03](#DemoAdultLibrary03)
-- [DemoAdultDataset03 - Library Only](https://github.com/ETIQ-AI/demo/blob/main/DemoAdultDataset03%20-%20Library%20Only.ipynb)
+We have pre-set example notebooks and config files.
 
-### DemoAdultLibrary03
+### Legacy library
 
-This is the main example notebook for our library, however if you have questions on any of the functionality check out the documentation or contact us directly!
+As the change from v1.2.4 to v1.3 we have Legacy notebooks in case you are still on 1.2.4 and you can find the dashboard for this version at https://legacy-dashboard.etiq.ai
 
 ## Bugs and feature requests
 
