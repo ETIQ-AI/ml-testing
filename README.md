@@ -23,7 +23,7 @@
 
 ## Etiq AI 
 
-In order to start working with the Etiq AI platform you will need to sign-up to our dashboard and then install the python package. This repository provides a number of notebooks and examples that show how easy it is to use and work with the Etiq.
+In order to start working with the Etiq AI platform you will need to sign-up to our dashboard: https://dashboard.etiq.ai/ and then install the python package. This repository provides a number of notebooks and examples that show how easy it is to use and work with the Etiq.
 
 ### Docs
 
