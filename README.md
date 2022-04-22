@@ -50,8 +50,7 @@ Load the config you'll use for your tests from whereever you store it. A config 
 A config is in a simple json format & it's where you can set your tests details - metrics you want to use, what kind of scans you want to run, what thresholds you want to put for passing a test:
 
 
-        {
-            "dataset": {
+        {"dataset": {
                 "label": "income",
                 "bias_params": {
                     "protected": "gender",
@@ -102,6 +101,8 @@ Run the scans you want to run:
     snapshot.scan_leakage()
 
 You can retrieve the results either via the interface or via the dashboard.
+
+![alt text](https://github.com/ETIQ-AI/demo/tree/main/dashboards_screenshots/dashboard_screenshot.jpg?raw=true)
 
 
 For testing in production, we will release an Etiq + Airflow demo example shortly. But in the meantime, just reach out: info@etiq.ai
