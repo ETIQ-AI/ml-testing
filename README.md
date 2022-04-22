@@ -23,11 +23,25 @@
 
 ## Etiq AI 
 
-In order to start working with the Etiq AI platform you will need to sign-up to our dashboard: https://dashboard.etiq.ai/ and then install the python package. This repository provides a number of notebooks and examples that show how easy it is to use and work with the Etiq.
+In order to start working with the Etiq AI platform you will need to sign-up to our dashboard: https://dashboard.etiq.ai/ and then install the python package. 
+
+    pip install etiq
+
+This repository provides a number of notebooks and examples that show how easy it is to use and work with the Etiq.
 
 ### Docs
 
 For a quickstart and install just go to our docs: https://docs.etiq.ai/quickstart
+
+### Getting started
+
+For testing as you build, you can just use etiq directly from your jupyter notebook or any other python based IDE. 
+
+To install 
+
+For testing in production, we will release an Etiq + Airflow demo example shortly. But in the meantime, just reach out: info@etiq.ai
+
+We also recommend integrating tests with your Github commits. For help just email us info@etiq.ai
 
 
 ## Example Notebooks & Configs
@@ -40,7 +54,7 @@ As the change from v1.2.4 to v1.3 we have Legacy notebooks in case you are still
 
 ## Bugs and feature requests
 
-If you discover a bug or have a great idea that you would like to see in the Etiq AI library then please share it either by:
+If you discover a bug or have a great idea that you would like to see in the Etiq AI tool then please share it either by:
 
 - Raising an [issue](https://github.com/ETIQ-AI/demo/issues) in this repo.
 - Join &amp; discuss it with us on the [Etiq Slack channel](https://etiqcore.slack.com/signup#/domain-signup).
