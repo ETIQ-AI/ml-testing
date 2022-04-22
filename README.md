@@ -102,7 +102,19 @@ Run the scans you want to run:
 
 You can retrieve the results either via the interface or via the dashboard.
 
-![alt text](https://github.com/ETIQ-AI/demo/tree/main/dashboards_screenshots/dashboard_screenshot.jpg?raw=true)
+The view below shows the list of snapshots and aggregated view of the scans and model health:
+
+
+![dashboard_screenshot](https://user-images.githubusercontent.com/94112047/164801597-b100f7fa-a82c-441d-91a3-05bdf480852c.png)
+
+
+
+Each snapshot links to a detailed view where all the scans associated with that snapshot are displayed:
+
+![snapshot_screenshot](https://user-images.githubusercontent.com/94112047/164801679-086dc4c3-754b-4d58-9c64-6367fadcfd7f.png)
+
+
+
 
 
 For testing in production, we will release an Etiq + Airflow demo example shortly. But in the meantime, just reach out: info@etiq.ai
