@@ -35,9 +35,74 @@ For a quickstart and install just go to our docs: https://docs.etiq.ai/quickstar
 
 ### Getting started
 
-For testing as you build, you can just use etiq directly from your jupyter notebook or any other python based IDE. 
+To set-up your testing suite as you build your model, you can just use etiq directly from your jupyter notebook or any other python based IDE. To start just import etiq once you've installed it, log to the dashboard and create a project.
+You can run the library without connecting to the dashboard, but then your results will not be stored. 
+Only the results of the tests gets stored, the details of the models or datasets underneath are not stored.
 
-To install 
+    import etiq
+    
+
+
+Load the config you'll use for your tests from whereever you store it. A config is in a simple json format & it's where you can set your tests details - metrics you want to use, what kind of scans you want to run, what thresholds you want to put for passing a test:
+
+    etiq.load_config("./config_demo.json")
+
+A config is in a simple json format & it's where you can set your tests details - metrics you want to use, what kind of scans you want to run, what thresholds you want to put for passing a test:
+
+
+        {
+            "dataset": {
+                "label": "income",
+                "bias_params": {
+                    "protected": "gender",
+                    "privileged": 1,
+                    "unprivileged": 0,
+                    "positive_outcome_label": 1,
+                    "negative_outcome_label": 0
+                },
+                "train_valid_test_splits": [0.0, 1.0, 0.0],
+                "cat_col": "cat_vars",
+                "cont_col": "cont_vars"
+            },
+            "scan_accuracy_metrics": {
+                "thresholds": {
+                    "accuracy": [0.8, 1.0],
+                    "true_pos_rate": [0.6, 1.0],
+                    "true_neg_rate":  [0.6, 1.0]           
+                }
+            },
+            "scan_bias_metrics": {
+                "thresholds": {
+                    "equal_opportunity": [0.0, 0.2],
+                    "demographic_parity": [0.0, 0.2]     
+                }
+            }, 
+            "scan_leakage": {
+                "leakage_threshold": 0.85
+               }
+        }
+
+Next, log your dataset, model, shanpshot - as applicable
+
+    from etiq import Model
+     
+    dataset_loader = etiq.dataset(my_test_dataset)
+      
+    model = Model(model_architecture=my_trained_model, model_fitted=my_model_fit)
+     
+    snapshot = project.snapshots.create(name="My New Snapshot", dataset=dataset_loader.initial_dataset, model=model, bias_params=dataset_loader.bias_params)
+
+
+Run the scans you want to run:
+
+    snapshot.scan_accuracy_metrics()
+     
+    snapshot.scan_bias_metrics()
+     
+    snapshot.scan_leakage()
+
+You can retrieve the results either via the interface or via the dashboard.
+
 
 For testing in production, we will release an Etiq + Airflow demo example shortly. But in the meantime, just reach out: info@etiq.ai
 
