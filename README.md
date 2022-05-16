@@ -7,7 +7,7 @@
 <h3 align="center">Etiq AI Demo Repository</h3>
 
 <p align="center">
-  Etiq AI provides a platform to allow you to optimise and mitigate issues &amp; identify fairness and biases issues in your predictive models.
+  Etiq is an ML testing platform for data scientists and ML engineers. Supports both pre-production and in-production, with Etiq Test, Monitor, and Explain. This repo constains demo notebooks and curated testing metrics.
   <br>
   <a href="https://docs.etiq.ai"><strong>Explore the documentation</strong></a>
   <br>
