@@ -9,6 +9,7 @@
             "negative_outcome_label": 0
         },
         "train_valid_test_splits": [1.0, 0.01, 0.0],
+        "remove_protected_from_features": true,
         "cat_col": ["workclass", "relationship", "occupation", "gender", "race", "native-country", "marital-status", "income", "education"],
         "cont_col": ["age", "educational-num", "fnlwgt", "capital-gain", "capital-loss", "hours-per-week"]
     },
