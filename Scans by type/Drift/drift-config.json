@@ -1,7 +1,15 @@
 {
     "dataset": {
         "label": "income",
-        "train_valid_test_splits": [0.0, 1.0, 0.0]
+        "bias_params": {
+            "protected": "gender",
+            "privileged": 1,
+            "unprivileged": 0,
+            "positive_outcome_label": 1,
+            "negative_outcome_label": 0
+        },
+        "train_valid_test_splits": [0.0, 1.0, 0.0],
+        "remove_protected_from_features": true
 		
     },
     "scan_drift_metrics": {
