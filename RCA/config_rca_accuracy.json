@@ -1,0 +1,29 @@
+{
+    "dataset": {
+        "label": "income",
+        "bias_params": {
+            "protected": "gender",
+            "privileged": 1,
+            "unprivileged": 0,
+            "positive_outcome_label": 1,
+            "negative_outcome_label": 0
+        },
+        "train_valid_test_splits": [0.8, 0.1, 0.1],
+        "remove_protected_from_features": true
+    },
+    "scan_accuracy_metrics": {
+        "thresholds": {
+            "accuracy": [0.8, 1.0],
+            "true_pos_rate": [0.75, 1.0],
+            "true_neg_rate":  [0.7, 1.0]           
+        }
+    },
+    "scan_accuracy_metrics_rca": {
+        "thresholds": {
+            "accuracy": [0.8, 1.0],
+            "true_pos_rate": [0.7, 1.0]          
+        },
+        "metric_filter": ["accuracy", "true_pos_rate"], 
+        "minimum_segment_size": 100
+    }
+}
