@@ -9,8 +9,7 @@
             "negative_outcome_label": 0
         },
         "train_valid_test_splits": [0.8, 0.1, 0.1],
-        "cat_col": "cat_vars",
-        "cont_col": "cont_vars"
+        "remove_protected_from_features": true		
     },
     "scan_accuracy_metrics": {
         "thresholds": {
