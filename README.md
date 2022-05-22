@@ -60,8 +60,8 @@ A config is in a simple json format & it's where you can set your tests details 
                     "negative_outcome_label": 0
                 },
                 "train_valid_test_splits": [0.0, 1.0, 0.0],
-                "cat_col": "cat_vars",
-                "cont_col": "cont_vars"
+                "remove_protected_from_features": true
+                
             },
             "scan_accuracy_metrics": {
                 "thresholds": {
@@ -98,7 +98,6 @@ Run the scans you want to run:
      
     snapshot.scan_bias_metrics()
      
-    snapshot.scan_leakage()
 
 You can retrieve the results either via the interface or via the dashboard.
 
