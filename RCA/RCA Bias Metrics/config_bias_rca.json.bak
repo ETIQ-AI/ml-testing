@@ -1,0 +1,35 @@
+{
+    "dataset": {
+        "label": "income",
+        "bias_params": {
+            "protected": "gender",
+            "privileged": 1,
+            "unprivileged": 0,
+            "positive_outcome_label": 1,
+            "negative_outcome_label": 0
+        },
+        "train_valid_test_splits": [0.0, 1.0, 0.0],
+        "remove_protected_from_features": true
+    },
+	
+	"scan_bias_metrics": {
+        "thresholds": {
+            "equal_opportunity": [0.0, 0.2],
+            "demographic_parity": [0.0, 0.2],
+            "equal_odds_tnr":  [0.0, 0.2], 
+			"individual_fairness": [0.0, 0.2], 
+			"equal_odds_tpr": [0.0, 0.2] 
+			
+        }
+    },
+    "scan_bias_metrics_rca": {
+        "thresholds": {
+            "demographic_parity": [0.0, 0.4]           
+        },
+        "metric_filter": ["demographic_parity"],
+        "ignore_lower_threshold": true,
+        "ignore_upper_threshold": false, 
+		"minimum_segment_size": 1000
+    }
+	
+}
