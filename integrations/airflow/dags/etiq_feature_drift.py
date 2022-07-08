@@ -107,8 +107,8 @@ with DAG(dag_id="etiq_drift_example", # Dag id
     etiq_configfile = Variable.get('ETIQ_CONFIG')
     etiq_data = Variable.get('ETIQ_DATA')
     etiq_project = Variable.get('ETIQ_PROJECT')
-    etiq_dashboard = Variable.get('ETIQ_DASHBOARD')
-    etiq_token = Variable.get('ETIQ_TOKEN')
+    etiq_dashboard = Variable.get('ETIQ_DASHBOARD', default_var = '')
+    etiq_token = Variable.get('ETIQ_TOKEN', default_var='')
 
     # We set up the sensor to scan every 30 seconds for new files
     latest_datafiles_sensor_task = FileSensor(task_id= "latest_datafiles_sensor_task",
