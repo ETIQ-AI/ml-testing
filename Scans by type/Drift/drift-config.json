@@ -10,13 +10,14 @@
         },
         "train_valid_test_splits": [0.0, 1.0, 0.0],
         "remove_protected_from_features": true
-		
+
     },
     "scan_drift_metrics": {
         "thresholds": {
             "psi": [0.0, 0.15],
-            "kolmogorov_smirnov": [0.05, 1.0]
+            "kolmogorov_smirnov": [0.05, 1.0],
+            "earth_mover_drift_measure": [0.0, 0.01]
         },
-        "drift_measures": ["kolmogorov_smirnov" , "psi"]       
-    }      
+        "drift_measures": ["kolmogorov_smirnov" , "psi", "earth_mover_drift_measure"]
+    }
 }
