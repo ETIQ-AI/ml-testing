@@ -15,23 +15,25 @@
     "scan_drift_metrics": {
         "thresholds": {
             "psi": [0.0, 0.2],
-            "kolmogorov_smirnov": [0.05, 1.0]
+            "kolmogorov_smirnov": [0.05, 1.0],
+            "earth_mover_drift_measure": [0.0, 0.2]
         },
-        "drift_measures": ["kolmogorov_smirnov", "psi"]       
+        "drift_measures": ["kolmogorov_smirnov", "psi", "earth_mover_drift_measure"]
     },
     "scan_concept_drift_metrics": {
         "thresholds": {
             "earth_mover_distance": [0.0, 0.05],
             "kl_divergence": [0.0, 0.2],
-            "jensen_shannon_distance": [0.0, 0.2]
+            "jensen_shannon_distance": [0.0, 0.2],
+            "total_variational_distance": [0.0, 0.03]
         },
-        "drift_measures": ["earth_mover_distance"]       
+        "drift_measures": ["earth_mover_distance", "total_variational_distance"]
     },
     "scan_target_drift_metrics": {
         "thresholds": {
             "psi": [0.0, 0.2],
             "kolmogorov_smirnov": [0.05, 1.0]
         },
-        "drift_measures": ["psi"]       
-    } 
+        "drift_measures": ["psi"]
+    }
 }
