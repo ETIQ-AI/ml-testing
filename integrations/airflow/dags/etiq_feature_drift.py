@@ -116,13 +116,13 @@ with DAG(dag_id="etiq_drift_example", # Dag id
                                               filepath=str(Path(etiq_data) / 'latest/*csv'),
                                               mode='reschedule',
                                               timeout = 30 * 60,
-                                              fs_conn_id="docker_fs")
+                                              fs_conn_id="etiq_fs")
     base_datafile_sensor_task = FileSensor(task_id= "base_datafile_sensor_task",
                                            poke_interval= 30,
                                            filepath=str(Path(etiq_data) / 'base/*csv'),
                                            mode='reschedule',
                                            timeout = 30 * 60,
-                                           fs_conn_id="docker_fs")
+                                           fs_conn_id="etiq_fs")
     base_and_latest_present = EmptyOperator(
             task_id="base_and_latest_present"
         )
