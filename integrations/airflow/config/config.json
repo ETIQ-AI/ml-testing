@@ -1,0 +1,48 @@
+{
+    "dataset": {
+        "label": "income",
+        "bias_params": {
+            "protected": "gender",
+            "privileged": 1,
+            "unprivileged": 0,
+            "positive_outcome_label": 1,
+            "negative_outcome_label": 0
+        },
+        "train_valid_test_splits": [0.8, 0.2, 0.0],
+        "cat_col": ["workclass", "relationship", "occupation", "gender", "race", "native-country", "marital-status", "income", "education"],
+        "cont_col": ["age", "educational-num", "fnlwgt", "capital-gain", "capital-loss", "hours-per-week"]
+    },
+    "scan_drift_metrics": {
+        "thresholds": {
+            "psi": [0.0, 0.15],
+            "kolmogorov_smirnov": [0.05, 1.0]
+        },
+        "drift_measures": ["psi"]
+    },
+    "scan_target_drift_metrics": {
+        "thresholds": {
+            "psi": [0.0, 0.15],
+            "kolmogorov_smirnov": [0.05, 1.0]
+        },
+        "drift_measures": ["psi"]
+    },
+    "scan_target_drift_metrics_rca": {
+        "thresholds": {
+            "psi": [0.0, 0.15]
+        },
+        "drift_measures": ["psi"],
+        "ignore_lower_threshold": true,
+        "ignore_upper_threshold": false,
+        "minimum_segment_size": 1000
+    },
+    "scan_drift_metrics_rca": {
+        "thresholds": {
+            "psi": [0.0, 0.15]
+        },
+        "drift_measures": ["psi"],
+        "ignore_lower_threshold": true,
+        "ignore_upper_threshold": false,
+        "minimum_segment_size": 1000,
+        "features": ["hours-per-week"]
+    }
+}
