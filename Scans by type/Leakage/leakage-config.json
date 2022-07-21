@@ -12,7 +12,18 @@
         "remove_protected_from_features": true
 		
     },
-    "scan_leakage": {
-        "leakage_threshold": 0.85
+    "scan_target_leakage": {
+        "leakage_threshold": 0.85,
+        "minimum_segment_size": 1000,
+        "continuous_continuous_measure": "pearsons",
+        "categorical_categorical_measure": "cramersv",
+        "categorical_continuous_measure": "rankbiserial"
+     },
+    "scan_demographic_leakage": {
+        "leakage_threshold": 0.85,
+        "minimum_segment_size": 1000,
+        "continuous_continuous_measure": "pearsons",
+        "categorical_categorical_measure": "cramersv",
+        "categorical_continuous_measure": "rankbiserial"
      }
 }
