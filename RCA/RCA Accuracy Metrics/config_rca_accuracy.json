@@ -21,7 +21,8 @@
     "scan_accuracy_metrics_rca": {
         "thresholds": {
             "accuracy": [0.8, 1.0],
-            "true_pos_rate": [0.7, 1.0]          
+            "true_pos_rate": [0.7, 1.0],
+            "f_score": [0.7, 1.0]
         },
         "metric_filter": ["accuracy", "true_pos_rate"], 
         "minimum_segment_size": 1000
