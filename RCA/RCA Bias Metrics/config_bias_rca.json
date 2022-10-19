@@ -24,7 +24,8 @@
     },
     "scan_bias_metrics_rca": {
         "thresholds": {
-            "demographic_parity": [0.0, 0.3]           
+            "demographic_parity": [0.0, 0.3],
+            "treatment_equality": [0.0, 0.2]
         },
         "metric_filter": ["demographic_parity"],
         "ignore_lower_threshold": true,
