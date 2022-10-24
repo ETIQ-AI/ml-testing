@@ -18,15 +18,19 @@
             "demographic_parity": [0.0, 0.2],
             "equal_odds_tnr":  [0.0, 0.2], 
 			"individual_fairness": [0.0, 0.2], 
-			"equal_odds_tpr": [0.0, 0.2] 
+			"equal_odds_tpr": [0.0, 0.2],
+            "treatment_equality": [0.0, 0.2]
 			
-        }
+        },
+        "metric_filter": ["demographic_parity", "treatment_equality"]
     },
+    
     "scan_bias_metrics_rca": {
         "thresholds": {
-            "demographic_parity": [0.0, 0.3]           
+            "demographic_parity": [0.0, 0.3],
+            "treatment_equality": [0.0, 0.2]
         },
-        "metric_filter": ["demographic_parity"],
+        "metric_filter": ["demographic_parity", "treatment_equality"],
         "ignore_lower_threshold": true,
         "ignore_upper_threshold": false, 
 		"minimum_segment_size": 1000
