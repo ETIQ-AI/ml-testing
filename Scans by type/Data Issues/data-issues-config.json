@@ -8,6 +8,26 @@
             "positive_outcome_label": 1,
             "negative_outcome_label": 0
         },
+        "id_col": ["ID"],
+        "date_col": ["start_date", "end_date"],
+        "convert_date_cols": true,
         "train_valid_test_splits": [0.8, 0.2, 0.0]
+    },
+    "scan_data_issues": {
+        "orderings": [["start_date","end_date"]],
+        "filter_ids": ["ID"],
+        "search_for_missing_features": true,
+        "search_for_unknown_features": true,
+        "identical_feature_filter": null,
+        "missing_category_feature_filter": null,
+        "unknown_category_feature_filter": null,
+        "range_feature_filter": null,
+        "duplicate_features_subset": ["ID"]
+    },
+    "scan_drift_metrics": {
+        "thresholds": {
+            "psi": [0.0, 0.15]
+        },
+        "drift_measures": ["psi"]
     }
 }
