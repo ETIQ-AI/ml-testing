@@ -21,9 +21,9 @@
   <a href="https://etiq.ai/contact-us">Contact</a>
 </p>
 
-## Etiq AI 
+## Etiq AI
 
-In order to start working with the Etiq AI platform you will need to sign-up to our dashboard: https://dashboard.etiq.ai/ and then install the python package. 
+In order to start working with the Etiq AI platform you will need to sign-up to our dashboard: https://dashboard.etiq.ai/ and then install the python package.
 
     pip install etiq
 
@@ -36,11 +36,11 @@ For a quickstart and install just go to our docs: https://docs.etiq.ai/quickstar
 ### Getting started
 
 To set-up your testing suite as you build your model, you can just use etiq directly from your jupyter notebook or any other python based IDE. To start just import etiq once you've installed it, log to the dashboard and create a project.
-You can run the library without connecting to the dashboard, but then your results will not be stored. 
+You can run the library without connecting to the dashboard, but then your results will not be stored.
 Only the results of the tests gets stored, the details of the models or datasets underneath are not stored.
 
     import etiq
-    
+
 
 
 Load the config you'll use for your tests from whereever you store it. A config is in a simple json format & it's where you can set your tests details - metrics you want to use, what kind of scans you want to run, what thresholds you want to put for passing a test:
@@ -61,21 +61,21 @@ A config is in a simple json format & it's where you can set your tests details 
                 },
                 "train_valid_test_splits": [0.0, 1.0, 0.0],
                 "remove_protected_from_features": true
-                
+
             },
             "scan_accuracy_metrics": {
                 "thresholds": {
                     "accuracy": [0.8, 1.0],
                     "true_pos_rate": [0.6, 1.0],
-                    "true_neg_rate":  [0.6, 1.0]           
+                    "true_neg_rate":  [0.6, 1.0]
                 }
             },
             "scan_bias_metrics": {
                 "thresholds": {
                     "equal_opportunity": [0.0, 0.2],
-                    "demographic_parity": [0.0, 0.2]     
+                    "demographic_parity": [0.0, 0.2]
                 }
-            }, 
+            },
             "scan_leakage": {
                 "leakage_threshold": 0.85
                }
@@ -84,20 +84,24 @@ A config is in a simple json format & it's where you can set your tests details 
 Next, log your dataset, model, shanpshot - as applicable
 
     from etiq import Model
-     
-    dataset_loader = etiq.dataset(my_test_dataset)
-      
+
+    dataset = etiq.BiasDatasetBuilder.dataset(my_test_dataset)
+    bias_params = etiq.BiasDatasetBuilder.bias_params()
+
     model = Model(model_architecture=my_trained_model, model_fitted=my_model_fit)
-     
-    snapshot = project.snapshots.create(name="My New Snapshot", dataset=dataset_loader.initial_dataset, model=model, bias_params=dataset_loader.bias_params)
+
+    snapshot = project.snapshots.create(name="My New Snapshot",
+                                        dataset=dataset,
+                                        model=model,
+                                        bias_params=bias_params)
 
 
 Run the scans you want to run:
 
     snapshot.scan_accuracy_metrics()
-     
+
     snapshot.scan_bias_metrics()
-     
+
 
 You can retrieve the results either via the interface or via the dashboard.
 
