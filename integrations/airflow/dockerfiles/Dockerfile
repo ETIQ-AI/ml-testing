@@ -1,2 +1,2 @@
-FROM apache/airflow:2.3.2
+FROM apache/airflow:2.6.3
 RUN pip install --no-cache-dir etiq
